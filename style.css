@@ -1,0 +1,137 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f9f9f9;
+  color: #333;
+}
+header {
+  background: #000;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+header .logo {
+  height: 50px;
+  display: block;
+  margin: 0 auto 10px auto;
+}
+header h1.animated-text {
+  animation: glow 2s ease-in-out infinite alternate;
+}
+@keyframes glow {
+  from { text-shadow: 0 0 5px #ff4081; }
+  to { text-shadow: 0 0 20px #ff4081; }
+}
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+nav ul li {
+  display: inline;
+  margin: 0 10px;
+}
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+section {
+  padding: 40px 20px;
+  background: #fff;
+  margin: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.content-box {
+  transition: transform 0.3s ease;
+}
+.content-box:hover {
+  transform: scale(1.02);
+}
+.creator-slider {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+}
+.creator-slider img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  animation: slide 8s infinite linear;
+}
+@keyframes slide {
+  0% {transform: translateX(0);}
+  100% {transform: translateX(-50%);}
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+input, textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+button {
+  background: #ff4081;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+button:hover {
+  background: #e73370;
+}
+footer {
+  background: #222;
+  color: #aaa;
+  text-align: center;
+  padding: 20px;
+}
+/* Our Clients Section - Small Logos + Floating Animation */
+.brand-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  overflow: hidden;
+  position: relative;
+}
+
+.brand-logo {
+  width: 100px; /* 👈 Logos chhote kiye */
+  height: auto;
+  filter: grayscale(100%);
+  opacity: 0.7;
+  transition: transform 0.4s ease, filter 0.4s ease, opacity 0.4s ease;
+  animation: floatLogo 6s ease-in-out infinite alternate;
+}
+
+.brand-logo:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* Floating Animation */
+@keyframes floatLogo {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Optional: Continuous Scroll Animation */
+.brand-logos.scroll {
+  animation: scrollLogos 15s linear infinite;
+}
+
+@keyframes scrollLogos {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+

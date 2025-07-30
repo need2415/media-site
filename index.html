@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Needcos - Influencer Marketing Agency</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+  <style>
+    .hero-animated {
+      position: relative;
+      text-align: center;
+      padding: 50px 20px;
+      background: linear-gradient(135deg, #ff4d4d, #ff9966);
+      color: #fff;
+      overflow: hidden;
+    }
+    .hero-animated h2 {
+      font-size: 2.5rem;
+      animation: fadeInDown 1.5s ease;
+    }
+    .hero-animated p {
+      font-size: 1.2rem;
+      animation: fadeInUp 2s ease;
+    }
+    .floating-icons {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: 0;
+    }
+    .floating-icons img {
+      position: absolute;
+      width: 60px;
+      animation: float 6s ease-in-out infinite;
+      opacity: 0.7;
+    }
+    @keyframes float {
+      0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+      50% { opacity: 1; }
+      100% { transform: translateY(-10vh) rotate(360deg); opacity: 0; }
+    }
+    .hero-videos {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 20px;
+      position: relative;
+      z-index: 1;
+    }
+    .hero-videos iframe {
+      border-radius: 10px;
+    }
+    .ugc-videos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      justify-items: center;
+      margin-top: 20px;
+    }
+    .ugc-videos iframe {
+      border-radius: 10px;
+    }
+    .testimonial {
+      background: #f9f9f9;
+      padding: 40px 20px;
+      text-align: center;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      margin: 20px 0;
+    }
+    .testimonial h3 {
+      font-size: 1.8rem;
+      color: #333;
+      margin-bottom: 15px;
+    }
+    .testimonial p {
+      font-size: 1rem;
+      color: #555;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .contact-buttons {
+      text-align: center;
+      margin: 30px 0;
+    }
+    .whatsapp-button {
+      display: inline-flex;
+      align-items: center;
+      background-color: #25D366;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 50px;
+      font-size: 1.2rem;
+      text-decoration: none;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      transition: background-color 0.3s ease;
+    }
+    .whatsapp-button:hover {
+      background-color: #1ebe5b;
+    }
+    .whatsapp-button img {
+      width: 24px;
+      height: 24px;
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="images/logo.png" class="logo" alt="Needcos Logo">
+    <h1 class="animated-text">Needcos - Influencer Marketing Agency</h1>
+    <nav>
+      <ul>
+        <li><a href="#brands">Brands</a></li>
+        <li><a href="#clients">Our Clients</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#ugc">UGC Videos</a></li>
+        <li><a href="#testimonial">Testimonials</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="hero" class="hero-animated">
+    <div class="floating-icons">
+      <img src="images/instagram.png" style="left:10%; animation-delay:0s;">
+      <img src="images/youtube.png" style="left:40%; animation-delay:2s;">
+      <img src="images/facebook.png" style="left:70%; animation-delay:4s;">
+    </div>
+    <h2>Connecting Brands with Top Creators</h2>
+    <p>We are a growing influencer marketing agency, helping brands start impactful campaigns with creators.</p>
+    <div class="hero-videos">
+      <iframe src="https://www.instagram.com/reel/DMH6V_KtMfZ/embed" width="200" height="340" frameborder="0" scrolling="no" allowfullscreen></iframe>
+      <iframe src="https://www.instagram.com/reel/DIaqvsLJZCy/embed" width="200" height="340" frameborder="0" scrolling="no" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <section id="brands" class="content-box">
+    <h2>For Brands</h2>
+    <p>We help brands collaborate with verified influencers and create ROI-driven campaigns. Be among our first partners and get special attention for your campaigns.</p>
+    <ul>
+      <li>✅ 10,000+ creators ready to collaborate</li>
+      <li>✅ ROI-focused influencer campaigns</li>
+      <li>✅ Detailed reporting & analytics</li>
+    </ul>
+    <form action="https://formspree.io/f/mgvepjny" method="POST" class="contact-form">
+      <h3>Partner With Us</h3>
+      <input type="text" name="brand_name" placeholder="Brand Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="requirements" placeholder="Tell us your campaign needs" required></textarea>
+      <button type="submit">Get Started</button>
+    </form>
+  </section>
+
+  <section id="clients" class="content-box">
+    <h2>Our Future Partners</h2>
+    <p>We are excited to collaborate with amazing brands. Your brand can be one of the first to partner with us and get dedicated, result-driven influencer campaigns.</p>
+    <div class="brand-logos">
+      <p style="font-size:1rem; color:#555;">(Your brand logo could be featured here soon!)</p>
+    </div>
+  </section>
+
+  <section id="services" class="content-box">
+    <h2>Our Services</h2>
+    <p>Influencer marketing, social media ads, UGC content, video production & brand strategy.</p>
+  </section>
+
+  <section id="ugc" class="content-box">
+    <h2>UGC (User-Generated Content) Videos</h2>
+    <p>Check out some UGC-style videos created by influencers we collaborate with. Your brand could be next!</p>
+    <div class="ugc-videos">
+      <iframe src="https://www.instagram.com/reel/DMH6V_KtMfZ/embed" width="320" height="440" frameborder="0" scrolling="no" allowfullscreen></iframe>
+      <iframe src="https://www.instagram.com/reel/DIaqvsLJZCy/embed" width="320" height="440" frameborder="0" scrolling="no" allowfullscreen></iframe>
+      <iframe src="https://www.instagram.com/reel/DMMj0iipKld/embed" width="320" height="440" frameborder="0" scrolling="no" allowfullscreen></iframe>
+      <iframe src="https://www.instagram.com/reel/DMKh5aOPvMN/embed" width="320" height="440" frameborder="0" scrolling="no" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <section id="testimonial" class="content-box testimonial">
+    <h3>What Our Early Partners Say</h3>
+    <p>We are just starting out, and we aim to deliver excellent ROI-focused campaigns. Your feedback could be the first success story here!</p>
+  </section>
+
+  <section id="contact" class="content-box">
+    <h2>Contact Us</h2>
+    <p><strong>Call:</strong> 9625262483</p>
+    <p><strong>Instagram:</strong> <a href="https://instagram.com/needcos" target="_blank">@needcos</a></p>
+    <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/company/needcos" target="_blank">Needcos LinkedIn</a></p>
+
+    <div class="contact-buttons">
+      <a href="https://wa.me/919625262483" target="_blank" class="whatsapp-button">
+        <img src="images/whatsapp-icon.png" alt="WhatsApp"> Chat on WhatsApp
+      </a>
+    </div>
+
+    <form action="https://formspree.io/f/mgvepjny" method="POST" class="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Needcos. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
